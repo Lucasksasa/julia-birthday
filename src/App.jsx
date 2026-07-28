@@ -20,7 +20,7 @@ import Final from "./pages/Final";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/julia-birthday">
       <Routes>
         {/* Página inicial */}
         <Route path="/" element={<Home />} />
