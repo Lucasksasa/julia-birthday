@@ -3,36 +3,38 @@ import { useNavigate } from "react-router-dom";
 export default function Photos() {
   const navigate = useNavigate();
 
+  const BASE = import.meta.env.BASE_URL;
+
   const photos = [
     {
-      img: "/fotos/foto1.jpg",
+      img: `${BASE}fotos/foto1.jpg`,
       texto: "Uma foto que eu levo no coração💚",
       data: "15 de Janeiro de 2026",
       local: "Festa da sua prima Luísa",
     },
     {
-      img: "/fotos/foto2.jpg",
+      img: `${BASE}fotos/foto2.jpg`,
       texto: "Primeira vez que nos vimos depois de muito tempo🥰",
       data: "10 de Dezembro de 2023",
       local: "Parque da cidade",
     },
     {
-      img: "/fotos/foto3.jpg",
+      img: `${BASE}fotos/foto3.jpg`,
       texto: "Nossa primeira foto juntos❤️",
       data: "29 de Julho de 2021",
       local: "Seu aniversário de 15 anos",
     },
-/*  --------------------pra colocar mais fotos----------------------------
+
+    /*  --------------------pra colocar mais fotos----------------------------
     {
-  img: "/fotos/foto4.jpg",
-  texto: "Outra memória nossa 💚",
-  data: "10 de Setembro de 2025",
-  local: "Mais um momento especial",
-},
+      img: `${BASE}fotos/foto4.jpg`,
+      texto: "Outra memória nossa 💚",
+      data: "10 de Setembro de 2025",
+      local: "Mais um momento especial",
+    },
 
-não esqueça de adicionar uma foto no public/fotos
-
-*/
+    Não esqueça de adicionar a foto em public/fotos
+    ------------------------------------------------------------------------ */
   ];
 
   return (
@@ -44,7 +46,6 @@ não esqueça de adicionar uma foto no public/fotos
         padding: "40px",
       }}
     >
-        
       <h1 style={{ textAlign: "center" }}>
         Nossas Memórias 📸
       </h1>
@@ -57,7 +58,6 @@ não esqueça de adicionar uma foto no public/fotos
       >
         Alguns dos momentos mais especiais que vivi com você 💚
       </p>
-
 
       <div
         style={{
@@ -76,8 +76,7 @@ não esqueça de adicionar uma foto no public/fotos
               padding: "15px",
               width: "280px",
               borderRadius: "8px",
-              boxShadow:
-                "0 15px 30px rgba(0,0,0,0.35)",
+              boxShadow: "0 15px 30px rgba(0,0,0,0.35)",
               transform:
                 index % 2 === 0
                   ? "rotate(-3deg)"
@@ -85,12 +84,10 @@ não esqueça de adicionar uma foto no public/fotos
               transition: "0.3s",
               cursor: "pointer",
             }}
-
             onMouseEnter={(e) => {
               e.currentTarget.style.transform =
                 "scale(1.05) rotate(0deg)";
             }}
-
             onMouseLeave={(e) => {
               e.currentTarget.style.transform =
                 index % 2 === 0
@@ -98,7 +95,6 @@ não esqueça de adicionar uma foto no public/fotos
                   : "rotate(3deg)";
             }}
           >
-
             <img
               src={photo.img}
               alt={`Memória ${index + 1}`}
@@ -109,7 +105,6 @@ não esqueça de adicionar uma foto no public/fotos
                 borderRadius: "5px",
               }}
             />
-
 
             <h3
               style={{
@@ -122,7 +117,6 @@ não esqueça de adicionar uma foto no public/fotos
               {photo.texto}
             </h3>
 
-
             <p
               style={{
                 color: "#555",
@@ -134,7 +128,6 @@ não esqueça de adicionar uma foto no public/fotos
               📅 {photo.data}
             </p>
 
-
             <p
               style={{
                 color: "#777",
@@ -145,11 +138,9 @@ não esqueça de adicionar uma foto no public/fotos
             >
               📍 {photo.local}
             </p>
-
           </div>
         ))}
       </div>
-
 
       <div
         style={{
@@ -159,7 +150,6 @@ não esqueça de adicionar uma foto no public/fotos
           gap: "15px",
         }}
       >
-
         <button
           onClick={() => navigate("/")}
           style={{
@@ -172,7 +162,6 @@ não esqueça de adicionar uma foto no public/fotos
           ← Voltar
         </button>
 
-
         <button
           onClick={() => navigate("/cartinhas")}
           style={{
@@ -184,9 +173,7 @@ não esqueça de adicionar uma foto no public/fotos
         >
           Próxima Página →
         </button>
-
       </div>
-
     </div>
   );
 }

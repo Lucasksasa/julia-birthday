@@ -25,7 +25,7 @@ export default function MensagemSecreta() {
           backdropFilter: "blur(8px)",
         }}
       >
-        <h1>💚 Mensagem Secreta 💚</h1>
+        <h1>💚 Mensagem Especial 💚</h1>
 
         <p style={{ lineHeight: "1.8", fontSize: "1.2rem" }}>
           Meu amor,

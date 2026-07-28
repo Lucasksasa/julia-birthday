@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 export default function Playlist() {
   const navigate = useNavigate();
 
+  const BASE = import.meta.env.BASE_URL;
+
   return (
     <div
       style={{
@@ -38,7 +40,10 @@ export default function Playlist() {
           <h3>💚 Música que ouço quando estou muito apaixonado</h3>
 
           <audio controls style={{ width: "100%" }}>
-            <source src="/musicas/musica1.mp3" type="audio/mpeg" />
+            <source
+              src={`${BASE}musicas/musica1.mp3`}
+              type="audio/mpeg"
+            />
             Seu navegador não suporta áudio.
           </audio>
         </div>
@@ -55,7 +60,10 @@ export default function Playlist() {
           <h3>🌷 Música que ouço quando to morrendo de saudades</h3>
 
           <audio controls style={{ width: "100%" }}>
-            <source src="/musicas/musica2.mp3" type="audio/mpeg" />
+            <source
+              src={`${BASE}musicas/musica2.mp3`}
+              type="audio/mpeg"
+            />
             Seu navegador não suporta áudio.
           </audio>
         </div>
@@ -72,7 +80,10 @@ export default function Playlist() {
           <h3>✨ Música que me lembra você</h3>
 
           <audio controls style={{ width: "100%" }}>
-            <source src="/musicas/musica3.mp3" type="audio/mpeg" />
+            <source
+              src={`${BASE}musicas/musica3.mp3`}
+              type="audio/mpeg"
+            />
             Seu navegador não suporta áudio.
           </audio>
         </div>

@@ -24,7 +24,7 @@ export default function Explore() {
   },
   {
     emoji: "💚",
-    title: "Mensagem Secreta",
+    title: "Mensagem Especial",
     description: "Abra apenas no final",
     route: "/mensagem-secreta",
   },

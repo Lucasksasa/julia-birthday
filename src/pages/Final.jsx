@@ -6,6 +6,8 @@ import "./Final.css";
 export default function Final() {
   const navigate = useNavigate();
 
+  const BASE = import.meta.env.BASE_URL;
+
   const audioRef = useRef(null);
 
   const [playing, setPlaying] = useState(false);
@@ -76,15 +78,13 @@ export default function Final() {
       </h1>
 
       <div className="polaroid">
-
         <img
-          src="/fotos/final.jpg"
+          src={`${BASE}fotos/final.jpg`}
           alt="Nós dois"
           className="foto"
         />
 
         <div className="player">
-
           <h3>My Love Mine All Mine</h3>
 
           <p>Mitski</p>
@@ -112,47 +112,45 @@ export default function Final() {
 
           <audio ref={audioRef}>
             <source
-              src="/musicas/nossa-musica.mp3"
+              src={`${BASE}musicas/nossa-musica.mp3`}
               type="audio/mpeg"
             />
           </audio>
-
         </div>
       </div>
 
       <div className="mensagem">
-
         <p>Julia,</p>
 
         <p>
-          Obrigado por cada momento, conversa,
-          abraço, risada e memória que criamos ao longo desses anos.
+          Obrigado por cada momento, conversa, abraço,
+          risada e memória que criamos ao longo desses anos.
         </p>
 
         <p>
-          Que venham muitos anos pela frente, e que cada ano seja mágico
-          ao seu lado. Obrigado por me amar e me escolher.
+          Que venham muitos anos pela frente, e que cada
+          ano seja mágico ao seu lado. Obrigado por me amar
+          e me escolher.
         </p>
 
         <p>
-          Espero que toda vez que abrir esse site,
-          você lembre do quanto é especial para mim.
-          Se você não deu play na música ainda, vai lá,
-          feche seus olhos, ouça a música até o fim e imagine nós
-          dois por um tempo
+          Espero que toda vez que abrir esse site, você
+          lembre do quanto é especial para mim. Se você não
+          deu play na música ainda, vai lá, feche seus olhos,
+          ouça a música até o fim e imagine nós dois por um
+          tempo.
         </p>
-
-
 
         <div className="assinatura-container">
-  <h3>Eu te amo.</h3>
+          <h3>Eu te amo.</h3>
 
-  <p className="assinatura">
-    Com amor,<br />
-    Lucas 💚
-  </p>
-</div>
-</div>
+          <p className="assinatura">
+            Com amor,
+            <br />
+            Lucas 💚
+          </p>
+        </div>
+      </div>
 
       <button
         className="voltar"
@@ -160,7 +158,6 @@ export default function Final() {
       >
         ↺ Reviver Jornada
       </button>
-
     </div>
   );
 }
